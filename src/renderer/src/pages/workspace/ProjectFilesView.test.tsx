@@ -356,7 +356,7 @@ describe('ProjectFilesView', () => {
       projectId: 'default',
       sessionId: file.sessionId,
       name: file.name,
-      path: getUploadedAttachmentPath(file.attachment),
+      path: getUploadedAttachmentPath(file.attachment, 'default'),
       mimeType: file.attachment.mimeType,
       size: file.size,
       mtimeMs: file.timestamp,
@@ -1937,6 +1937,8 @@ describe('ProjectFilesView', () => {
         messageId: 'message-1',
         uploads: [
           createUpload({
+            versionId: 'upload-version-1',
+            versionNumber: 1,
             name: 'results.csv',
             originalName: 'results.csv',
             path: '/uploads/session-1/results.csv',
@@ -1963,7 +1965,10 @@ describe('ProjectFilesView', () => {
     )
     await vi.waitFor(() =>
       expect(window.api.uploads.readPreview).toHaveBeenCalledWith(
-        expect.objectContaining({ path: '/uploads/session-1/results.csv', encoding: 'utf8' })
+        expect.objectContaining({
+          path: 'upload-version:default/session-1/upload-version-1',
+          encoding: 'utf8'
+        })
       )
     )
     expect(container.textContent).toContain('1 rows · 2 columns')
@@ -2021,6 +2026,8 @@ describe('ProjectFilesView', () => {
         messageId: 'message-1',
         uploads: [
           createUpload({
+            versionId: 'upload-version-1',
+            versionNumber: 1,
             name: 'results.csv',
             originalName: 'results.csv',
             path: '/uploads/session-1/results.csv',
@@ -2040,7 +2047,10 @@ describe('ProjectFilesView', () => {
 
     await vi.waitFor(() =>
       expect(window.api.uploads.readPreview).toHaveBeenCalledWith(
-        expect.objectContaining({ path: '/uploads/session-1/results.csv', encoding: 'utf8' })
+        expect.objectContaining({
+          path: 'upload-version:default/session-1/upload-version-1',
+          encoding: 'utf8'
+        })
       )
     )
     expect(container.textContent).not.toContain('legacy_column')
