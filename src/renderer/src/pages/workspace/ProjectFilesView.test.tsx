@@ -1544,11 +1544,15 @@ describe('ProjectFilesView', () => {
     expect(window.api.previewResources.acquire).toHaveBeenCalledWith({
       source: 'artifact',
       path: '/workspace/typhoon_tracks.png',
+      projectId: 'default',
+      sessionId: 'session-1',
       mimeType: 'image/png'
     })
     expect(window.api.previewResources.acquire).toHaveBeenCalledWith({
       source: 'upload',
       path: '/uploads/uploaded_image.png',
+      projectId: 'default',
+      sessionId: 'session-1',
       mimeType: 'image/png'
     })
     expect(
@@ -1634,6 +1638,8 @@ describe('ProjectFilesView', () => {
     expect(window.api.previewResources.acquire).toHaveBeenCalledWith({
       source: 'artifact',
       path: '/workspace/generated-image',
+      projectId: 'default',
+      sessionId: 'session-1',
       mimeType: 'image/png'
     })
   })
@@ -1716,6 +1722,8 @@ describe('ProjectFilesView', () => {
 
     expect(window.api.artifacts.readPreview).toHaveBeenCalledWith({
       path: '/workspace/results.csv',
+      projectId: 'default',
+      sessionId: 'session-1',
       maxBytes: 32768,
       encoding: 'utf8'
     })
@@ -1952,8 +1960,10 @@ describe('ProjectFilesView', () => {
       'Failed to read project file preview',
       expect.any(Error)
     )
-    expect(window.api.uploads.readPreview).toHaveBeenCalledWith(
-      expect.objectContaining({ path: '/uploads/session-1/results.csv', encoding: 'utf8' })
+    await vi.waitFor(() =>
+      expect(window.api.uploads.readPreview).toHaveBeenCalledWith(
+        expect.objectContaining({ path: '/uploads/session-1/results.csv', encoding: 'utf8' })
+      )
     )
     expect(container.textContent).toContain('1 rows · 2 columns')
   })
@@ -2026,8 +2036,10 @@ describe('ProjectFilesView', () => {
       await Promise.resolve()
     })
 
-    expect(window.api.uploads.readPreview).toHaveBeenCalledWith(
-      expect.objectContaining({ path: '/uploads/session-1/results.csv', encoding: 'utf8' })
+    await vi.waitFor(() =>
+      expect(window.api.uploads.readPreview).toHaveBeenCalledWith(
+        expect.objectContaining({ path: '/uploads/session-1/results.csv', encoding: 'utf8' })
+      )
     )
     expect(container.textContent).not.toContain('legacy_column')
   })
