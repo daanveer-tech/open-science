@@ -56,6 +56,7 @@ type ProjectFilePreviewTarget = {
   source: 'artifact' | 'upload'
   artifact: MessageArtifact
   projectId: string
+  sessionId: string
   cacheKey: string
   encoding?: 'utf8' | 'base64'
 }
@@ -87,7 +88,9 @@ const MONTH_MS = 30 * DAY_MS
 const YEAR_MS = 365 * DAY_MS
 
 const createProjectFilePreviewArtifact = (file: ProjectFileItem): MessageArtifact => ({
-  id: file.sourceFileId,
+  id: file.sourceVersionId ?? file.sourceFileId,
+  artifactId: file.source === 'artifact' ? file.sourceFileId : undefined,
+  versionId: file.sourceVersionId,
   kind: 'managed-file',
   path: file.path,
   name: file.name,
@@ -107,7 +110,10 @@ const getProjectFilePreviewCacheKey = ({
 
 // Builds the source-neutral capability and source-specific read metadata used by File tiles.
 const createProjectFilePreviewTarget = (
-  target: Pick<ProjectFilePreviewTarget, 'id' | 'path' | 'source' | 'artifact' | 'projectId'>
+  target: Pick<
+    ProjectFilePreviewTarget,
+    'id' | 'path' | 'source' | 'artifact' | 'projectId' | 'sessionId'
+  >
 ): ProjectFilePreviewTarget => ({
   ...target,
   cacheKey: getProjectFilePreviewCacheKey(target),
@@ -138,6 +144,8 @@ const readProjectFilePreview = async (
   try {
     const preview = await readPreview({
       path: target.path,
+      projectId: target.projectId,
+      sessionId: target.sessionId,
       maxBytes:
         target.encoding === 'base64' ? ARTIFACT_IMAGE_PREVIEW_BYTES : ARTIFACT_PREVIEW_BYTES,
       encoding: target.encoding
@@ -835,6 +843,13 @@ const ProjectFilesViewContent = ({
       sessionTitleById.get(sessionId) ?? `Session ${sessionId.slice(0, 8)}`,
     [sessionTitleById]
   )
+  const getArtifactGroupTitle = useCallback(
+    (group: ArtifactGroupItem): string => {
+      const title = group.originSession?.title ?? getSessionTitle(group.sessionId)
+      return group.originSession?.state === 'deleted' ? `${title} · Source session deleted` : title
+    },
+    [getSessionTitle]
+  )
   const filterOptions = useMemo<ProjectFilesFilterOption[]>(() => {
     const options: ProjectFilesFilterOption[] = [
       {
@@ -851,7 +866,7 @@ const ProjectFilesViewContent = ({
       },
       ...index.groups.items.map((group) => ({
         id: `session:${group.sessionId}`,
-        label: getSessionTitle(group.sessionId),
+        label: getArtifactGroupTitle(group),
         count: group.artifactCount,
         kind: 'session' as const
       }))
@@ -872,7 +887,7 @@ const ProjectFilesViewContent = ({
 
     return options
   }, [
-    getSessionTitle,
+    getArtifactGroupTitle,
     index.artifactsBySession,
     index.groups.items,
     index.overview,
@@ -990,10 +1005,11 @@ const ProjectFilesViewContent = ({
           path: file.path,
           source: file.source,
           artifact: createProjectFilePreviewArtifact(file),
-          projectId: activeProjectId ?? ''
+          projectId: file.projectId,
+          sessionId: file.sessionId
         })
       ),
-    [activeProjectId, uploadsCollapsed, visibleArtifactFiles, visibleUploadFiles]
+    [uploadsCollapsed, visibleArtifactFiles, visibleUploadFiles]
   )
   const filePreviews = useProjectFilePreviews(previewTargets, previewReader)
   // A previous version may remain cached while the current path loads; never render it as current.
@@ -1061,7 +1077,10 @@ const ProjectFilesViewContent = ({
         mimeType: file.mimeType,
         source: file.source === 'upload' ? 'upload' : undefined,
         size: file.size,
-        mtimeMs: file.mtimeMs
+        mtimeMs: file.mtimeMs,
+        artifactId: file.source === 'artifact' ? file.sourceFileId : undefined,
+        selectedVersionId: file.source === 'artifact' ? file.sourceVersionId : undefined,
+        originSession: file.originSession
       })
     )
   }
@@ -1218,7 +1237,7 @@ const ProjectFilesViewContent = ({
               <ProjectArtifactGroupSection
                 key={group.sessionId}
                 group={group}
-                title={getSessionTitle(group.sessionId)}
+                title={getArtifactGroupTitle(group)}
                 page={index.artifactsBySession[group.sessionId]}
                 loadMode={effectiveFilterId === 'all' ? 'manual' : 'scroll'}
                 manualVisibleItemLimit={
