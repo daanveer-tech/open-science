@@ -314,9 +314,9 @@ Remote.It 페어링을 통해 휴대전화나 태블릿에서 동일한 localhos
 
 ## 자주 묻는 질문
 
-### AIPOCH Open-Science는 누가 개발하나요?
+### AIPOCH Open-Science란 무엇이며 누가 개발하나요?
 
-답변: AIPOCH Open-Science는 AIPOCH 팀이 독립적인 오픈 소스(Apache-2.0) 연구 워크벤치로 개발합니다. 저장소, 웹사이트, 문서 전반에서 정식 명칭인 **AIPOCH Open-Science**를 사용합니다.
+답변: AIPOCH Open-Science는 AIPOCH 팀이 개발하는 독립적인 오픈 소스(Apache-2.0) 연구 워크벤치입니다. **AIPOCH Open-Science**는 제품의 정식 명칭이고 **Open-Science**는 줄임말입니다. 두 이름 모두 동일한 AIPOCH 제품을 가리킵니다.
 
 ### AIPOCH Open-Science를 처음 열면 무엇을 해야 하나요?
 

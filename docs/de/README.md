@@ -317,9 +317,9 @@ Die Headless-CLI und das Node.js-SDK ohne zusätzliche Abhängigkeiten verwenden
 
 ## Häufig gestellte Fragen
 
-### Wer entwickelt AIPOCH Open-Science?
+### Was ist AIPOCH Open-Science und wer entwickelt es?
 
-A: AIPOCH Open-Science wird vom AIPOCH-Team als unabhängige, quelloffene Forschungsarbeitsumgebung (Apache-2.0) entwickelt. Im Repository, auf der Website und in der Dokumentation verwenden wir den vollständigen Namen **AIPOCH Open-Science**.
+A: AIPOCH Open-Science ist eine unabhängige, quelloffene Forschungsarbeitsumgebung (Apache-2.0), die vom AIPOCH-Team entwickelt wird. **AIPOCH Open-Science** ist der vollständige Produktname; **Open-Science** ist die Kurzform. Beide Namen bezeichnen dasselbe AIPOCH-Produkt.
 
 ### Was soll ich tun, wenn ich AIPOCH Open-Science zum ersten Mal öffne?
 

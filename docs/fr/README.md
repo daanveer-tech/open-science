@@ -326,9 +326,9 @@ paquet publiable, afin qu'il n'y ait qu'une seule référence de commandes à ma
 
 ## Questions fréquentes
 
-### Qui développe AIPOCH Open-Science ?
+### Qu'est-ce qu'AIPOCH Open-Science et qui le développe ?
 
-R : AIPOCH Open-Science est développé par l'équipe AIPOCH en tant qu'environnement de recherche indépendant et open source (Apache-2.0). Dans le dépôt, sur le site web et dans la documentation, nous utilisons son nom complet, **AIPOCH Open-Science**.
+R : AIPOCH Open-Science est un environnement de travail de recherche indépendant et open source (Apache-2.0), développé par l'équipe AIPOCH. **AIPOCH Open-Science** est le nom complet du produit, tandis que **Open-Science** est son nom abrégé. Les deux noms désignent le même produit AIPOCH.
 
 ### Que dois-je faire la première fois que j'ouvre AIPOCH Open-Science ?
 

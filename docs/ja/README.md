@@ -314,9 +314,9 @@ Remote.It のペアリングにより、スマートフォンやタブレット�
 
 ## よくある質問
 
-### AIPOCH Open-Science は誰が開発していますか？
+### AIPOCH Open-Science とは何ですか？誰が開発していますか？
 
-回答：AIPOCH Open-Science は、AIPOCH チームが独立したオープンソース（Apache-2.0）の研究ワークベンチとして開発しています。リポジトリ、ウェブサイト、ドキュメントでは、正式名称の **AIPOCH Open-Science** を使用しています。
+回答：AIPOCH Open-Science は、AIPOCH チームが開発する独立したオープンソース（Apache-2.0）の研究ワークベンチです。**AIPOCH Open-Science** は製品の正式名称で、**Open-Science** はその短縮名です。どちらも同じ AIPOCH 製品を指します。
 
 ### AIPOCH Open-Science を初めて開いたときは何をすればよいですか？
 

@@ -314,9 +314,9 @@ npm run dev:web
 
 ## 常見問題
 
-### 誰在開發 AIPOCH Open-Science？
+### 什麼是 AIPOCH Open-Science？由誰開發？
 
-答：AIPOCH Open-Science 由 AIPOCH 團隊開發，是一個獨立的開源（Apache-2.0）研究工作台。在程式碼庫、網站與文件中，我們統一使用完整名稱 **AIPOCH Open-Science**。
+答：AIPOCH Open-Science 是由 AIPOCH 團隊開發的獨立開源（Apache-2.0）研究工作台。**AIPOCH Open-Science** 是完整產品名稱，**Open-Science** 是簡稱；兩者均指同一個 AIPOCH 產品。
 
 ### 第一次開啟 AIPOCH Open-Science 時該做什麼？
 

@@ -325,9 +325,9 @@ publishable package so there is one command reference to maintain:
 
 ## Frequently Asked Questions
 
-### Who builds AIPOCH Open-Science?
+### What is AIPOCH Open-Science, and who builds it?
 
-A: AIPOCH Open-Science is built by the AIPOCH team as an independent, open-source (Apache-2.0) research workbench. We refer to it by its full name, **AIPOCH Open-Science**, across the repo, website, and docs.
+A: AIPOCH Open-Science is an independent, open-source (Apache-2.0) research workbench built by the AIPOCH team. **AIPOCH Open-Science** is the full product name, while **Open-Science** is its short name. Both names refer to the same AIPOCH product.
 
 ### What should I do the first time I open AIPOCH Open-Science?
 

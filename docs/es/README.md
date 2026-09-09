@@ -315,9 +315,9 @@ La CLI sin interfaz gráfica y el SDK de Node.js sin dependencias utilizan el mi
 
 ## Preguntas frecuentes
 
-### ¿Quién desarrolla AIPOCH Open-Science?
+### ¿Qué es AIPOCH Open-Science y quién lo desarrolla?
 
-R: AIPOCH Open-Science está desarrollado por el equipo de AIPOCH como un entorno de investigación independiente y de código abierto (Apache-2.0). En el repositorio, el sitio web y la documentación lo denominamos por su nombre completo, **AIPOCH Open-Science**.
+R: AIPOCH Open-Science es un entorno de trabajo de investigación independiente y de código abierto (Apache-2.0), desarrollado por el equipo de AIPOCH. **AIPOCH Open-Science** es el nombre completo del producto y **Open-Science** es su nombre abreviado. Ambos nombres se refieren al mismo producto de AIPOCH.
 
 ### ¿Qué debo hacer la primera vez que abro AIPOCH Open-Science?
 
