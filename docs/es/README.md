@@ -315,6 +315,10 @@ La CLI sin interfaz gráfica y el SDK de Node.js sin dependencias utilizan el mi
 
 ## Preguntas frecuentes
 
+### ¿Quién desarrolla AIPOCH Open-Science?
+
+R: AIPOCH Open-Science está desarrollado por el equipo de AIPOCH como un entorno de investigación independiente y de código abierto (Apache-2.0). En el repositorio, el sitio web y la documentación lo denominamos por su nombre completo, **AIPOCH Open-Science**.
+
 ### ¿Qué debo hacer la primera vez que abro AIPOCH Open-Science?
 
 R: Complete los cinco pasos de configuración: **Entorno**, **Ubicación de datos**, **Entorno de ejecución del agente**, **Proveedor de modelo** y **Entorno de ejecución de Notebook**. Corrija las filas obligatorias marcadas como **Acción necesaria**, instale o repare el agente seleccionado si se ofrece esa opción y pruebe la conexión con el modelo. La configuración de Notebook y una ubicación de datos personalizada son opcionales.

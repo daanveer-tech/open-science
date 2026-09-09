@@ -314,6 +314,10 @@ npm run dev:web
 
 ## 常見問題
 
+### 誰在開發 AIPOCH Open-Science？
+
+答：AIPOCH Open-Science 由 AIPOCH 團隊開發，是一個獨立的開源（Apache-2.0）研究工作台。在程式碼庫、網站與文件中，我們統一使用完整名稱 **AIPOCH Open-Science**。
+
 ### 第一次開啟 AIPOCH Open-Science 時該做什麼？
 
 答：完成五個設定步驟：**Environment**、**Data location**、**Agent runtime**、**Model provider** 和 **Notebook runtime**。修正標示為 `Action needed` 的必要項目；若提供選項，安裝或修復所選智能體；然後測試模型連線。Notebook 設定和自訂資料位置皆為選用。

@@ -325,6 +325,10 @@ publishable package so there is one command reference to maintain:
 
 ## Frequently Asked Questions
 
+### Who builds AIPOCH Open-Science?
+
+A: AIPOCH Open-Science is built by the AIPOCH team as an independent, open-source (Apache-2.0) research workbench. We refer to it by its full name, **AIPOCH Open-Science**, across the repo, website, and docs.
+
 ### What should I do the first time I open AIPOCH Open-Science?
 
 A: Complete the five setup steps: **Environment**, **Data location**, **Agent runtime**, **Model provider**, and **Notebook runtime**. Fix required rows marked `Action needed`, install or repair the selected agent if offered, and test the model connection. Notebook setup and a custom data location are optional.

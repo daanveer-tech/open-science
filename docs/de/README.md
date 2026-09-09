@@ -317,6 +317,10 @@ Die Headless-CLI und das Node.js-SDK ohne zusätzliche Abhängigkeiten verwenden
 
 ## Häufig gestellte Fragen
 
+### Wer entwickelt AIPOCH Open-Science?
+
+A: AIPOCH Open-Science wird vom AIPOCH-Team als unabhängige, quelloffene Forschungsarbeitsumgebung (Apache-2.0) entwickelt. Im Repository, auf der Website und in der Dokumentation verwenden wir den vollständigen Namen **AIPOCH Open-Science**.
+
 ### Was soll ich tun, wenn ich AIPOCH Open-Science zum ersten Mal öffne?
 
 A: Führen Sie die fünf Einrichtungsschritte aus: **Umgebung**, **Agent-Runtime**, **Modellanbieter**, **Notebook-Runtime** und **Datenspeicherort**. Bearbeiten Sie die mit `Action needed` gekennzeichneten Pflichtprüfungen, installieren oder reparieren Sie bei Bedarf das ausgewählte Agenten-Framework und testen Sie die Modellverbindung. Notebook-Einrichtung und benutzerdefinierter Datenspeicherort sind optional.
