@@ -255,6 +255,22 @@ AIPOCH Open-Science は **gpt-6-astra** を使用し、公式の75問の LitQA2-
 
 Recall@30 は、提出された最初の30件の結果に対象論文が含まれるかを測る指標であり、科学的な質問への正答率ではありません。ScholarQA-CS2 のスコアは回答品質の複合指標であり、完全に正しく回答できた問題の割合ではありません。
 
+#### AstaBench LitQA2-FullText — 科学文献の質問応答で正答率 93.33%
+
+AIPOCH が実施した AstaBench v0.5.4 の LitQA2-FullText Test 分割（75 問）の評価で、AIPOCH Open-Science は `deepseek-flash` と推論強度 Max を使用し、70 問に正答しました（正答率 93.33%）。この課題は科学文献の質問応答を測定します。論文を探して読み、実験条件を区別し、報告された結果を取り出して答えを選びます。上記の LitQA2-FullText-Search における検索 Recall@30 とは別の指標です。
+
+2026 年 11 月 2 日時点で、[公式 LitQA2-FullText Test 表](https://allenai-asta-bench-leaderboard.hf.space/literature-understanding)に表示された最高記録は 90.67%（68/75）でした。AIPOCH Open-Science のスコアは、この数値比較で 2.67 パーセントポイント高くなっています。
+
+<details>
+
+<summary><strong>AstaBench LitQA2-FullText のスコア比較</strong></summary>
+
+![AIPOCH Open-Science は AstaBench LitQA2-FullText の科学文献質問で 93.33% を記録し、10 月 28 日時点の公式記録と比較](../images/readme/astabench-litqa2-fulltext-local-comparison.png)
+
+図には 10 月 28 日時点の公式記録を使用し、表示上の最高スコアは 11 月 2 日に再確認しました。
+
+</details>
+
 ### 🏆 ASI-Bench B1–B4 — 報告内の4つの比較すべてで最高の表示スコア
 
 AIPOCH Open-Science は **GPT-6（gpt-6-astra / xhigh）**、分野別スペシャリスト、スキルを用い、ASI-Bench B1、B2、B3、B4でそれぞれ **79.35、56.11、59.67、59.46点** を記録しました。各値は報告に掲載された比較の最高表示値です。4条件は順に、**詳細な計画の実行、ワークフローの構成、自律的な研究手法の選択、無関係な背景情報がある状況での自律研究**を評価します。

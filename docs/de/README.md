@@ -256,6 +256,22 @@ Die Grafik trennt ein lokales Validation-Ergebnis von 41 offiziellen Test-Refere
 
 Recall@30 misst, ob die Zielpublikation unter den ersten 30 eingereichten Ergebnissen erscheint, nicht die Richtigkeit wissenschaftlicher Antworten. Der ScholarQA-CS2-Wert ist ein zusammengesetztes Maß für die Antwortqualität und nicht der Anteil vollständig richtig beantworteter Fragen.
 
+#### AstaBench LitQA2-FullText — 93.33% Genauigkeit bei Fragen zur wissenschaftlichen Literatur
+
+In einer von AIPOCH durchgeführten Auswertung des LitQA2-FullText-Test-Splits mit 75 Fragen aus AstaBench v0.5.4 beantwortete AIPOCH Open-Science mit `deepseek-flash` und der Denkstufe Max 70 Fragen richtig (93.33% Genauigkeit). Die Aufgabe prüft die Beantwortung von Fragen zur wissenschaftlichen Literatur: Publikationen finden und lesen, Versuchsbedingungen unterscheiden, berichtete Ergebnisse entnehmen und eine Antwort auswählen. Dies ist vom oben genannten Recall@30 für die LitQA2-FullText-Search-Retrieval-Aufgabe zu unterscheiden.
+
+Am 2. November 2026 zeigte die [offizielle LitQA2-FullText-Testtabelle](https://allenai-asta-bench-leaderboard.hf.space/literature-understanding) als höchsten erfassten Wert 90.67% (68/75). AIPOCH Open-Science erzielte in diesem Zahlenvergleich einen um 2.67 Prozentpunkte höheren Wert.
+
+<details>
+
+<summary><strong>AstaBench LitQA2-FullText-Ergebnisvergleich</strong></summary>
+
+![AIPOCH Open-Science erreicht 93.33% bei AstaBench LitQA2-FullText-Fragen zur wissenschaftlichen Literatur im Vergleich mit offiziellen Einträgen vom 28. Oktober](../images/readme/astabench-litqa2-fulltext-local-comparison.png)
+
+Die Grafik verwendet offizielle Vergleichseinträge vom 28. Oktober; der höchste angezeigte Wert wurde am 2. November erneut geprüft.
+
+</details>
+
 ### 🏆 ASI-Bench B1–B4 — Höchste angezeigte Werte in allen vier Vergleichen des Berichts
 
 AIPOCH Open-Science erzielte mit **GPT-6 (gpt-6-astra / xhigh)**, Fachspezialisten und Skills in ASI-Bench B1, B2, B3 und B4 **79.35, 56.11, 59.67 und 59.46 Punkte** — jeweils den höchsten angezeigten Wert der im Bericht erfassten Vergleiche. Die vier Bedingungen prüfen **das Ausführen eines vollständigen Plans, das Organisieren eines Arbeitsablaufs, die selbstständige Methodenwahl und autonome Forschung mit ablenkenden Hintergrundinformationen**.

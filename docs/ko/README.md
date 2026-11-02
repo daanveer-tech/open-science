@@ -255,6 +255,22 @@ AIPOCH Open-Science는 **gpt-6-astra**를 사용하여 공식 75문항 LitQA2-Fu
 
 Recall@30은 제출한 첫 30개 결과에 대상 논문이 포함되는지를 측정하며, 과학 질문의 정답률을 의미하지 않습니다. ScholarQA-CS2 점수는 응답 품질의 종합 지표이며, 모든 내용을 완전히 정확하게 답한 문항의 비율이 아닙니다.
 
+#### AstaBench LitQA2-FullText — 과학 문헌 질의응답 정확도 93.33%
+
+AIPOCH가 실시한 AstaBench v0.5.4의 LitQA2-FullText Test 분할 75문항 평가에서 AIPOCH Open-Science는 `deepseek-flash`와 Max 추론 강도를 사용해 70문항에 정답을 냈습니다(정확도 93.33%). 이 과제는 과학 문헌 질의응답을 평가합니다. 논문을 찾아 읽고, 실험 조건을 구분하며, 보고된 결과를 추출해 답을 선택해야 합니다. 이는 위의 LitQA2-FullText-Search 검색 Recall@30과 다른 지표입니다.
+
+2026년 11월 2일 [공식 LitQA2-FullText Test 표](https://allenai-asta-bench-leaderboard.hf.space/literature-understanding)에서 확인한 최고 기록은 90.67%(68/75)였습니다. AIPOCH Open-Science의 점수는 이 수치 비교에서 2.67%포인트 높습니다.
+
+<details>
+
+<summary><strong>AstaBench LitQA2-FullText 점수 비교</strong></summary>
+
+![AIPOCH Open-Science가 AstaBench LitQA2-FullText 과학 문헌 질문에서 93.33%를 기록하고 10월 28일 공식 기록과 비교](../images/readme/astabench-litqa2-fulltext-local-comparison.png)
+
+그림은 10월 28일의 공식 기록을 사용했으며, 표시된 최고 점수는 11월 2일 다시 확인했습니다.
+
+</details>
+
 ### 🏆 ASI-Bench B1–B4 — 보고서의 네 비교 모두에서 최고 표시 점수
 
 AIPOCH Open-Science는 **GPT-6(gpt-6-astra / xhigh)**, 분야별 스페셜리스트와 스킬을 활용해 ASI-Bench B1, B2, B3, B4에서 각각 **79.35, 56.11, 59.67, 59.46점**을 기록했습니다. 각 점수는 보고서에 수록된 해당 비교의 최고 표시 값입니다. 네 조건은 **완전한 계획 실행, 연구 흐름 구성, 자율적인 연구 방법 선택, 방해 배경 정보가 있는 상황에서의 자율 연구**를 평가합니다.

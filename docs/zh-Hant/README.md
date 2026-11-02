@@ -255,6 +255,22 @@ AIPOCH Open-Science 使用 **gpt-6-astra**，在官方75題 LitQA2-FullText-Sear
 
 Recall@30 衡量目標論文是否出現在提交結果的前30篇中，不是科學問答正確率。ScholarQA-CS2 得分衡量回答的綜合品質，不是全部答對的問題所占比例。
 
+#### AstaBench LitQA2-FullText：科學文獻問答正確率 93.33%
+
+在 AIPOCH 對 AstaBench v0.5.4 的 LitQA2-FullText Test 劃分（75 題）進行的評測中，AIPOCH Open-Science 使用 `deepseek-flash`、Max 推理強度答對 70 題，正確率為 93.33%。該測試考察科學文獻問答：檢索並閱讀論文、辨別實驗條件、提取報告結果，再從選項中選擇答案。它與上文 LitQA2-FullText-Search 的檢索 Recall@30 屬於不同指標。
+
+截至 2026 年 11 月 2 日，[官方 LitQA2-FullText Test 排行榜](https://allenai-asta-bench-leaderboard.hf.space/literature-understanding)顯示的最高紀錄為 90.67%（68/75）。在這一數值對照中，AIPOCH Open-Science 的成績高出 2.67 個百分點。
+
+<details>
+
+<summary><strong>AstaBench LitQA2-FullText 成績對照</strong></summary>
+
+![AIPOCH Open-Science 在 AstaBench LitQA2-FullText 科學文獻問答測試中取得 93.33%，與 10 月 28 日官方紀錄對照](../images/readme/astabench-litqa2-fulltext-local-comparison.png)
+
+圖中採用 10 月 28 日的官方紀錄快照；11 月 2 日再次核對了排行榜顯示的最高成績。
+
+</details>
+
 ### 🏆 ASI-Bench B1–B4：報告所列四項對照均為最高展示分數
 
 AIPOCH Open-Science 使用 **GPT-6（gpt-6-astra / xhigh）**，結合領域專家與技能，在 ASI-Bench B1、B2、B3、B4 四項測試中分別取得 **79.35、56.11、59.67和59.46分**，均為報告所列對照中的最高展示分數。四種評測條件依次考察**執行完整科研方案、組織研究流程、自主選擇方法，以及在干擾資訊下完成自主研究**，涵蓋從方法實作到自主科研執行的不同任務條件。

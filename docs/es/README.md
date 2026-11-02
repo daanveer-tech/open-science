@@ -256,6 +256,22 @@ La gráfica separa un resultado local Validation de 41 referencias oficiales Tes
 
 Recall@30 mide si el artículo objetivo aparece entre los primeros 30 resultados presentados; no mide la exactitud de las respuestas a preguntas científicas. La puntuación de ScholarQA-CS2 es una medida compuesta de la calidad de las respuestas, no el porcentaje de preguntas respondidas de forma completamente correcta.
 
+#### AstaBench LitQA2-FullText — 93.33% de precisión en preguntas sobre literatura científica
+
+En una evaluación realizada por AIPOCH sobre las 75 preguntas del conjunto Test de LitQA2-FullText de AstaBench v0.5.4, AIPOCH Open-Science con `deepseek-flash` y razonamiento Max respondió correctamente 70 preguntas (93.33% de precisión). La tarea evalúa la respuesta a preguntas sobre literatura científica: localizar y leer artículos, distinguir condiciones experimentales, extraer resultados y elegir una respuesta. Es distinta del Recall@30 de recuperación de LitQA2-FullText-Search indicado arriba.
+
+El 2 de noviembre de 2026, la [tabla oficial de LitQA2-FullText Test](https://allenai-asta-bench-leaderboard.hf.space/literature-understanding) mostraba una precisión máxima registrada del 90.67% (68/75). AIPOCH Open-Science obtuvo 2.67 puntos porcentuales más en esta comparación numérica.
+
+<details>
+
+<summary><strong>Comparación de resultados de AstaBench LitQA2-FullText</strong></summary>
+
+![AIPOCH Open-Science obtiene 93.33% en preguntas de literatura científica de AstaBench LitQA2-FullText frente a registros oficiales del 28 de octubre](../images/readme/astabench-litqa2-fulltext-local-comparison.png)
+
+El gráfico utiliza registros oficiales capturados el 28 de octubre; la puntuación máxima mostrada se comprobó de nuevo el 2 de noviembre.
+
+</details>
+
 ### 🏆 ASI-Bench B1–B4 — Puntuaciones mostradas más altas en las cuatro comparaciones del informe
 
 AIPOCH Open-Science obtuvo **79.35, 56.11, 59.67 y 59.46** en ASI-Bench B1, B2, B3 y B4 con **GPT-6 (gpt-6-astra / xhigh)**, especialistas de dominio y habilidades: los valores mostrados más altos en las respectivas comparaciones recogidas en los informes. Las cuatro condiciones evalúan **ejecutar un plan completo, organizar un flujo de trabajo, seleccionar métodos de investigación de forma autónoma y realizar investigación autónoma con información distractora**.

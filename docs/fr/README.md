@@ -255,6 +255,22 @@ Le graphique sépare un résultat Validation local de 41 références Test offic
 
 Recall@30 mesure si l’article cible apparaît parmi les 30 premiers résultats soumis ; il ne mesure pas l’exactitude des réponses aux questions scientifiques. Le score ScholarQA-CS2 est une mesure composite de la qualité des réponses, et non le pourcentage de questions auxquelles une réponse entièrement correcte a été donnée.
 
+#### AstaBench LitQA2-FullText — 93.33% de précision aux questions sur la littérature scientifique
+
+Dans une évaluation menée par AIPOCH sur les 75 questions de la partition Test de LitQA2-FullText dans AstaBench v0.5.4, AIPOCH Open-Science avec `deepseek-flash` et le niveau de raisonnement Max a répondu correctement à 70 questions (93.33% de précision). La tâche évalue les réponses aux questions de littérature scientifique : trouver et lire des articles, distinguer les conditions expérimentales, extraire les résultats et choisir une réponse. Elle est distincte du Recall@30 de recherche de LitQA2-FullText-Search présenté plus haut.
+
+Le 2 novembre 2026, le [tableau officiel LitQA2-FullText Test](https://allenai-asta-bench-leaderboard.hf.space/literature-understanding) affichait une précision maximale enregistrée de 90.67% (68/75). AIPOCH Open-Science a obtenu 2.67 points de pourcentage de plus dans cette comparaison numérique.
+
+<details>
+
+<summary><strong>Comparaison des résultats AstaBench LitQA2-FullText</strong></summary>
+
+![AIPOCH Open-Science obtient 93.33% aux questions de littérature scientifique d'AstaBench LitQA2-FullText, comparé aux résultats officiels du 28 octobre](../images/readme/astabench-litqa2-fulltext-local-comparison.png)
+
+Le graphique utilise les résultats officiels relevés le 28 octobre ; le meilleur score affiché a été vérifié de nouveau le 2 novembre.
+
+</details>
+
 ### 🏆 ASI-Bench B1–B4 — Meilleurs scores affichés dans les quatre comparaisons du rapport
 
 AIPOCH Open-Science a obtenu **79.35, 56.11, 59.67 et 59.46** sur ASI-Bench B1, B2, B3 et B4 avec **GPT-6 (gpt-6-astra / xhigh)**, des spécialistes de domaine et des compétences : les valeurs affichées les plus élevées dans les comparaisons respectives retenues par les rapports. Les quatre conditions évaluent **l'exécution d'un plan complet, l'organisation d'un processus de travail, le choix autonome des méthodes et la recherche autonome avec des informations distrayantes**.

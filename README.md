@@ -254,6 +254,22 @@ The chart separates one local Validation result from 41 official Test references
 
 Recall@30 measures whether the target paper appears among the first 30 submitted results; it is not scientific question-answering accuracy. The ScholarQA-CS2 score is a composite measure of response quality, not the percentage of questions answered completely correctly.
 
+#### AstaBench LitQA2-FullText — 93.33% scientific literature question-answering accuracy
+
+In an AIPOCH-run evaluation of AstaBench v0.5.4's 75-question LitQA2-FullText Test split, AIPOCH Open-Science answered 70 questions correctly (93.33% accuracy) using `deepseek-flash` with Max reasoning. The task tests scientific literature question answering: finding and reading papers, distinguishing experimental conditions, extracting reported results, and choosing an answer. This is separate from the LitQA2-FullText-Search retrieval Recall@30 result above.
+
+On November 2, 2026, the [official LitQA2-FullText Test table](https://allenai-asta-bench-leaderboard.hf.space/literature-understanding) showed a highest recorded accuracy of 90.67% (68/75). AIPOCH Open-Science scored 2.67 percentage points higher in this numerical comparison.
+
+<details>
+
+<summary><strong>AstaBench LitQA2-FullText score comparison</strong></summary>
+
+![AIPOCH Open-Science scored 93.33% on AstaBench LitQA2-FullText scientific literature questions, compared with official records in the October 28 snapshot](docs/images/readme/astabench-litqa2-fulltext-local-comparison.png)
+
+The chart uses official reference records captured on October 28; the highest displayed score was checked again on November 2.
+
+</details>
+
 ### 🏆 ASI-Bench B1–B4 — Highest displayed scores in all four report comparisons
 
 AIPOCH Open-Science scored **79.35, 56.11, 59.67, and 59.46** on ASI-Bench B1, B2, B3, and B4 using **GPT-6 (gpt-6-astra / xhigh)** with domain specialists and Skills, the highest displayed values in the respective comparisons retained in the reports. The four conditions evaluate **executing a fully specified plan, organizing a workflow, selecting research methods independently, and conducting autonomous research with distracting background information**.
